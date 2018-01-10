@@ -1,27 +1,42 @@
-# Meat
+# Meat - Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+## 1. Passos para começar
 
-## Development server
+### Clonando o Repositório
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`git clone https://github.com/RamiroAlvaro/meat.git`
 
-## Code scaffolding
+### Instalando as Dependências
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install`
 
-## Build
+### Inicializando o Servidor
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`ng serve` ou `npm start`
 
-## Running unit tests
+## 2. Iniciando o Backend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Instalando o json-server
 
-## Running end-to-end tests
+`npm install -g json-server`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Iniciando o serviço (raiz da aplicação)
 
-## Further help
+`json-server db.json`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Goodies
+
+Expressões regulares usadas na validação de formulários
+
+### Email Regex
+
+`/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i`
+
+### Number Regex
+
+`/^[0-9]*$/`
+
+
+## Créditos
+
+Todas as imagens usadas na aplicação são pertencentes a freepik.com
