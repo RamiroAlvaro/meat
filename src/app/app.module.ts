@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
-registerLocaleData(ptBr);
+
 
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,9 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service';
+import { OrderComponent } from './order/order.component';
 
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-ca
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
