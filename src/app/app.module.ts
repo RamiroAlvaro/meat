@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
-import { registerLocaleData } from '@angular/common';
+import {LocationStrategy, HashLocationStrategy, registerLocaleData} from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
-
 
 
 import { AppComponent } from './app.component';
@@ -47,7 +46,7 @@ registerLocaleData(ptBr);
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy }, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
