@@ -16,13 +16,9 @@
 
 ## 2. Iniciando o Backend
 
-### Instalando o json-server
-
-`npm install -g json-server`
-
 ### Iniciando o serviço (raiz da aplicação)
 
-`json-server db.json`
+`node backend/dist/server`
 
 ## Goodies
 
