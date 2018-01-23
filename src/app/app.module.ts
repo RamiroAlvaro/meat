@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
-import {LocationStrategy, HashLocationStrategy, registerLocaleData} from '@angular/common';
+import {registerLocaleData} from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 
 
@@ -21,6 +21,7 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './security/login/login.component';
 
 registerLocaleData(ptBr);
 
@@ -38,6 +39,7 @@ registerLocaleData(ptBr);
     ReviewsComponent,
     OrderSummaryComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,7 @@ registerLocaleData(ptBr);
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy }, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
