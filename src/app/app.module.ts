@@ -3,7 +3,7 @@ import {NgModule, LOCALE_ID, ErrorHandler} from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import {registerLocaleData} from '@angular/common';
-import ptBr from '@angular/common/locales/pt';
+import locatePt from '@angular/common/locales/pt';
 
 
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ import { LoginComponent } from './security/login/login.component';
 import { UserDetailComponent } from './header/user-detail/user-detail.component';
 import {ApplicationErrorHandler} from './app.error-handler';
 
-registerLocaleData(ptBr);
+registerLocaleData(locatePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ registerLocaleData(ptBr);
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'},
+  providers: [{provide: LOCALE_ID, useValue: 'pt'},
               {provide: ErrorHandler, useClass: ApplicationErrorHandler}],
   bootstrap: [AppComponent]
 })
